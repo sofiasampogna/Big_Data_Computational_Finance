@@ -1,0 +1,20 @@
+
+
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+X = np.array([[-1.16552626], [-0.0894637], [-0.46733838], [-0.87232152], [0.02687546], [0.8893861], [-0.02914397], [0.78094479], [0.77965428], [1.46220924]])
+y = np.array([-32.08941276, -3.02685324, -6.89483993, -11.28719275, 4.77239585, 21.53298882, -12.93092601, -7.83955722, 4.22214083, 16.68774553])
+
+# Create a linear regression model
+model = LinearRegression()
+
+# Fit the model to the data
+model.fit(X, y)
+
+# Get the coefficients and intercept of the line
+coefficients = model.coef_
+intercept = model.intercept_
+
+# Print the line equation
+print(f"Line equation: y = {coefficients[0]} * x + {intercept}")
